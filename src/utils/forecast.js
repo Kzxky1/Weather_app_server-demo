@@ -8,7 +8,7 @@ const foreCast = (latitude, longitude, callb) => {
     } else if (body.error) {
       callb('Unable to find the location. Try another search.')
     } else {
-      callb(undefined, 'currently outside it is ' + body.currently.temperature + ' degrees & ' + body.hourly.summary)
+      callb(undefined, 'Currently outside it is ' + body.currently.temperature + ' degrees & ' + body.hourly.summary + ' With high of ' + body.daily.data[0].temperatureHigh + ' degrees & low of ' + body.daily.data[0].temperatureLow + ' degrees')
     }
   }
   )
